@@ -12,7 +12,7 @@ body {
   display: flex;
   justify-content: center;
 }
-
+/* main container */
 .container {
   background-color: #efefef;
   display: grid;
