@@ -1,26 +1,26 @@
-@import url('https://fonts.cdnfonts.com/css/seven-segment');
-
-*{
+@import url("https://fonts.cdnfonts.com/css/seven-segment");
+/* simple web calculator 
+ created by Feroz hassan */
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: Arial, Helvetica, sans-serif;
 }
-body{
+body {
   margin-top: 15px;
   display: flex;
   justify-content: center;
 }
 
-
-.container { 
+.container {
   background-color: #efefef;
   display: grid;
   border: 1px solid;
   position: relative;
   width: 250px;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-  grid-template-rows: 0.5fr .5fr .5fr .5fr .5fr.5fr;
+  grid-template-rows: 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr.5fr;
   gap: 0px 0px;
   grid-auto-flow: row;
   grid-template-areas:
@@ -34,66 +34,121 @@ body{
     "Zero Point Plsmin Plus Equal";
 }
 
-.Display { grid-area: Display; }
-.science {grid-area: science}
+.Display {
+  grid-area: Display;
+}
+.science {
+  grid-area: science;
+}
 
-.check1 { grid-area: check1; }
+.check1 {
+  grid-area: check1;
+}
 
-.check2 { grid-area: check2; }
+.check2 {
+  grid-area: check2;
+}
 
-.replay { grid-area: replay; }
+.replay {
+  grid-area: replay;
+}
 
-.correct { grid-area: correct; }
+.correct {
+  grid-area: correct;
+}
 
-.opt { grid-area: opt; }
+.opt {
+  grid-area: opt;
+}
 
-.Eight { grid-area: Eight; }
+.Eight {
+  grid-area: Eight;
+}
 
-.Seven { grid-area: Seven; }
+.Seven {
+  grid-area: Seven;
+}
 
-.Nine { grid-area: Nine; }
+.Nine {
+  grid-area: Nine;
+}
 
-.Ac { grid-area: Ac; }
+.Ac {
+  grid-area: Ac;
+}
 
-.CE { grid-area: CE; }
+.CE {
+  grid-area: CE;
+}
 
-.Four { grid-area: Four; }
+.Four {
+  grid-area: Four;
+}
 
-.Five { grid-area: Five; }
+.Five {
+  grid-area: Five;
+}
 
-.Six { grid-area: Six; }
+.Six {
+  grid-area: Six;
+}
 
-.Devide { grid-area: Devide; }
+.Devide {
+  grid-area: Devide;
+}
 
-.Multy { grid-area: Multy; }
+.Multy {
+  grid-area: Multy;
+}
 
-.One { grid-area: One; }
+.One {
+  grid-area: One;
+}
 
-.Two { grid-area: Two; }
+.Two {
+  grid-area: Two;
+}
 
-.Three { grid-area: Three; }
+.Three {
+  grid-area: Three;
+}
 
-.Plus { grid-area: Plus; }
+.Plus {
+  grid-area: Plus;
+}
 
-.Minus { grid-area: Minus; }
+.Minus {
+  grid-area: Minus;
+}
 
-.Zero { grid-area: Zero; }
+.Zero {
+  grid-area: Zero;
+}
 
-.Point { grid-area: Point; }
+.Point {
+  grid-area: Point;
+}
 
-.Plsmin { grid-area: Plsmin; }
+.Plsmin {
+  grid-area: Plsmin;
+}
 
-.Equal { grid-area: Equal; }
+.Equal {
+  grid-area: Equal;
+}
 
-.history {grid-area: history}
-.clock {grid-area: clock} 
+.history {
+  grid-area: history;
+}
+.clock {
+  grid-area: clock;
+}
 
-.container div{
+.container div {
   display: flex;
   justify-content: center;
-  
 }
-#display{
+#display {
   width: 90%;
   padding: 5px;
   padding-right: 20px;
@@ -103,19 +158,19 @@ body{
   border: 5px solid;
   border-left: none;
   overflow: hidden;
-  font-family: 'Seven Segment', sans-serif;
+  font-family: "Seven Segment", sans-serif;
 }
-#operatorDisplay{
+#operatorDisplay {
   width: 10%;
   padding: 5px;
   background-color: darkseagreen;
   font-size: 20px;
   text-align: center;
   border: 5px solid;
-  border-right: none
+  border-right: none;
 }
-.container div button{
-  font-size:20px;
+.container div button {
+  font-size: 20px;
   width: 40px;
   height: 40px;
   margin-top: 8px;
@@ -125,24 +180,24 @@ body{
   box-shadow: 2px 2px 3px black, -4px -4px 3px white;
   border: none;
 }
-.Plus .operator{
+.Plus .operator {
   height: 95px;
 }
 
 #history {
-  display:none;
+  display: none;
   position: absolute;
   margin: 50px auto;
   left: 0;
   right: 0;
   width: 120px;
   height: 200px;
-  background-color: rgba(100, 100, 100,0.8);
+  background-color: rgba(100, 100, 100, 0.8);
   border: 1px solid black;
-  border-radius:5px;
+  border-radius: 5px;
   box-shadow: 5px 5px 5px black;
 }
-#history .head{
+#history .head {
   background-color: rgba(0, 255, 0, 0.4);
   display: flex;
   justify-content: space-between;
@@ -164,7 +219,7 @@ body{
   border-radius: 5px;
   display: none;
 }
-#optmodal ul li{
+#optmodal ul li {
   margin: 10px;
   width: 140px;
   padding: 10px;
@@ -177,46 +232,50 @@ body{
   text-align: center;
 }
 
-
-
-
-.head h2{
+.head h2 {
   background-color: blue;
   color: red;
   padding-left: 10px;
   padding-right: 10px;
 }
-.head h3{
+.head h3 {
   margin-left: 15px;
   color: white;
 }
-#clear, #ce{
+#clear,
+#ce {
   color: white;
-  background-color: red
+  background-color: red;
 }
-#check1,#check2,#replay,#correct,#opt{
+#check1,
+#check2,
+#replay,
+#correct,
+#opt {
   background-color: green;
   color: white;
   font-size: 12px;
 }
-#sc{
+#sc {
   display: flex;
   justify-content: space-around;
 }
-#sc button{
+#sc button {
   background-color: green;
   color: white;
-  width: 50px
+  width: 50px;
 }
-.container div button:hover,#clear:hover,#ce:hover {
+.container div button:hover,
+#clear:hover,
+#ce:hover {
   background-color: blue;
   color: white;
 }
-.container .clock{
+.container .clock {
   width: 65%;
   background-color: black;
   font-family: "Seven Segment";
-  font-size:20px;
+  font-size: 20px;
   letter-spacing: 3px;
   padding: 5px;
   color: blue;
